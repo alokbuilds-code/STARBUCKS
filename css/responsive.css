@@ -1,0 +1,488 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN & ADAPTIVE VIEWPORT REFINEMENTS
+   Carefully tuned for 320px, 375px, 390px, 768px, 1024px, 1440px & 1920px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   MOBILE NAVIGATION DRAWER (Slide-in for screens < 900px)
+   -------------------------------------------------------------------------- */
+.mobile-nav-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 85%;
+  max-width: 360px;
+  background-color: var(--color-canvas);
+  box-shadow: 4px 0 24px rgba(33, 29, 26, 0.15);
+  z-index: 205;
+  transform: translateX(-105%);
+  transition: transform var(--transition-slow);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+}
+
+.mobile-nav-panel.active {
+  transform: translateX(0);
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-ink-primary);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-neutral-light);
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-green-primary);
+  padding-left: 0.5rem;
+}
+
+.mobile-nav-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   INTERACTIVE DRINK CUSTOMIZER STYLES
+   -------------------------------------------------------------------------- */
+.customizer-product-summary {
+  display: flex;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-neutral-light);
+}
+
+.customizer-img {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--border-radius-md);
+  object-fit: cover;
+  background-color: var(--color-neutral-warm);
+}
+
+.customizer-summary-text h3 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.customizer-summary-text p {
+  font-size: 0.8125rem;
+  color: var(--color-ink-muted);
+}
+
+.customizer-nutrition-bar {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-ink-secondary);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.control-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-primary);
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-label span.value {
+  color: var(--color-green-primary);
+  font-weight: 600;
+}
+
+/* Size Selector Chips */
+.size-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.size-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.25rem;
+  background-color: var(--color-neutral-warm);
+  border: 1.5px solid var(--color-neutral-light);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.size-chip:hover {
+  background-color: var(--color-canvas);
+  border-color: rgba(33, 29, 26, 0.3);
+}
+
+.size-chip.active {
+  background-color: var(--color-green-soft);
+  border-color: var(--color-green-primary);
+  color: var(--color-green-primary);
+}
+
+.size-name {
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+.size-oz {
+  font-size: 0.6875rem;
+  color: var(--color-ink-muted);
+}
+
+/* Milk / Option Selectors */
+.option-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.option-chip {
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background-color: var(--color-neutral-warm);
+  border: 1px solid var(--color-neutral-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.option-chip:hover {
+  background-color: var(--color-canvas);
+  border-color: rgba(33, 29, 26, 0.3);
+}
+
+.option-chip.active {
+  background-color: var(--color-ink-primary);
+  color: var(--color-white);
+  border-color: var(--color-ink-primary);
+}
+
+/* Stepper Controls (Shots, Pumps) */
+.stepper-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--color-neutral-warm);
+  border-radius: var(--border-radius-sm);
+}
+
+.stepper-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-neutral-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.stepper-btn:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-ink-primary);
+}
+
+.stepper-value {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--color-ink-primary);
+}
+
+/* --------------------------------------------------------------------------
+   STORE LOCATOR DRAWER STYLES
+   -------------------------------------------------------------------------- */
+.store-search-bar {
+  display: flex;
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+  background-color: var(--color-neutral-warm);
+  border: 1px solid var(--color-neutral-light);
+  padding: 0.25rem 0.5rem;
+}
+
+.store-input {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.store-input:focus {
+  outline: none;
+}
+
+.store-filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.store-filter-chip {
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-neutral-warm);
+  border: 1px solid var(--color-neutral-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.store-filter-chip.active {
+  background-color: var(--color-green-primary);
+  color: var(--color-white);
+  border-color: var(--color-green-primary);
+}
+
+.stores-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.store-card {
+  padding: 1.25rem;
+  background-color: var(--color-canvas);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-neutral-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.store-card:hover {
+  border-color: var(--color-green-primary);
+  box-shadow: var(--shadow-card);
+}
+
+.store-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.store-name {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--color-ink-primary);
+}
+
+.store-distance {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-green-primary);
+  background-color: var(--color-green-soft);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--border-radius-full);
+}
+
+.store-address {
+  font-size: 0.8125rem;
+  color: var(--color-ink-muted);
+  line-height: 1.4;
+}
+
+.store-hours {
+  font-size: 0.75rem;
+  color: var(--color-ink-secondary);
+}
+
+.store-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+}
+
+.amenity-badge {
+  font-size: 0.6875rem;
+  background-color: var(--color-neutral-warm);
+  color: var(--color-ink-secondary);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--border-radius-xs);
+}
+
+/* --------------------------------------------------------------------------
+   DEMO BAG / TRAY DRAWER
+   -------------------------------------------------------------------------- */
+.tray-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tray-empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-ink-muted);
+}
+
+.tray-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--color-neutral-warm);
+  border-radius: var(--border-radius-md);
+  position: relative;
+}
+
+.tray-item-img {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--border-radius-sm);
+  object-fit: cover;
+}
+
+.tray-item-info {
+  flex: 1;
+}
+
+.tray-item-title {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--color-ink-primary);
+  margin-bottom: 0.25rem;
+}
+
+.tray-item-meta {
+  font-size: 0.75rem;
+  color: var(--color-ink-muted);
+  line-height: 1.35;
+}
+
+.tray-item-price {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-ink-primary);
+  margin-top: 0.4rem;
+}
+
+.btn-remove-item {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 1.125rem;
+  color: var(--color-ink-muted);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.btn-remove-item:hover {
+  color: #C0392B;
+}
+
+.demo-disclaimer-note {
+  font-size: 0.75rem;
+  color: var(--color-amber-dark);
+  background-color: #FDF4E3;
+  padding: 0.75rem;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  border-left: 3px solid var(--color-amber-reserve);
+}
+
+/* --------------------------------------------------------------------------
+   VIEWPORT BREAKPOINT FINE-TUNING
+   -------------------------------------------------------------------------- */
+
+/* 320px - 380px (Ultra-Compact Mobile Phones) */
+@media (max-width: 380px) {
+  :root {
+    --header-height: 4.25rem;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .brand-wordmark {
+    display: none;
+  }
+
+  .btn {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.875rem;
+  }
+
+  .size-selector-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .drawer-panel {
+    max-width: 100%;
+  }
+}
+
+/* 768px (Tablet) */
+@media (min-width: 768px) and (max-width: 959px) {
+  .hero-headline {
+    font-size: 3rem;
+  }
+
+  .craft-visual-mosaic {
+    margin-bottom: 2rem;
+  }
+}
+
+/* 1440px - 1920px (Large Editorial Displays) */
+@media (min-width: 1440px) {
+  .hero-headline {
+    font-size: 4.5rem;
+  }
+
+  .hero-image-frame {
+    max-width: 620px;
+  }
+
+  .drinks-curated-grid {
+    gap: 2.5rem;
+  }
+}

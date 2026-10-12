@@ -1,0 +1,1053 @@
+/* ==========================================================================
+   SECTIONS: SIX DISTINCT EDITORIAL VISUAL MOMENTS
+   ========================================================================== */
+
+/* ==========================================================================
+   MOMENT A: HERO CAMPAIGN (Asymmetrical Editorial Spread)
+   ========================================================================== */
+.section-hero {
+  position: relative;
+  background-color: var(--color-canvas);
+  padding-top: clamp(2rem, 5vw, 4.5rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  border-bottom: 1px solid var(--color-neutral-light);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+.hero-meta-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-green-primary);
+}
+
+.hero-meta-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-green-primary);
+}
+
+.hero-headline {
+  font-size: var(--text-display);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: var(--color-ink-primary);
+}
+
+.hero-headline span.italic {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-green-dark);
+}
+
+.hero-copy {
+  font-size: var(--text-md);
+  color: var(--color-ink-secondary);
+  line-height: 1.65;
+  max-width: 48ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.hero-tasting-notes {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-neutral-light);
+  font-size: 0.8125rem;
+  color: var(--color-ink-muted);
+}
+
+.hero-tasting-notes strong {
+  color: var(--color-ink-primary);
+  font-weight: 600;
+}
+
+/* Hero Media Display */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  background-color: var(--color-neutral-warm);
+  box-shadow: 0 20px 48px -12px rgba(33, 29, 26, 0.16);
+  aspect-ratio: 4 / 5;
+}
+
+.hero-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.02);
+  transition: transform var(--transition-slow);
+}
+
+.hero-image-frame:hover img {
+  transform: scale(1.06);
+}
+
+.hero-image-stamp {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background-color: rgba(251, 249, 245, 0.94);
+  backdrop-filter: blur(10px);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.stamp-kicker {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-green-primary);
+  display: block;
+}
+
+.stamp-title {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: var(--color-ink-primary);
+  margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   MOMENT B: FEATURED DRINKS (Editorial Non-Generic Composition)
+   ========================================================================== */
+.section-drinks {
+  background-color: var(--color-neutral-warm);
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+  position: relative;
+}
+
+.drinks-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+@media (min-width: 800px) {
+  .drinks-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.drinks-headline-group {
+  max-width: 42ch;
+}
+
+.drinks-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-green-primary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.drinks-title {
+  font-size: var(--text-3xl);
+  line-height: 1.1;
+  color: var(--color-ink-primary);
+}
+
+.drinks-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-tab {
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  background-color: rgba(251, 249, 245, 0.6);
+  border: 1px solid rgba(33, 29, 26, 0.08);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-tab:hover {
+  background-color: var(--color-canvas);
+  color: var(--color-ink-primary);
+}
+
+.filter-tab.active {
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+  border-color: var(--color-green-dark);
+}
+
+/* Drinks Editorial Composition Layout */
+.drinks-curated-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .drinks-curated-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+/* Lead Hero Drink Card (Cols 1-7) */
+.drink-card-lead {
+  grid-column: span 12;
+  background-color: var(--color-canvas);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(33, 29, 26, 0.06);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+@media (min-width: 900px) {
+  .drink-card-lead {
+    grid-column: span 7;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.drink-card-lead:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.drink-media-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-neutral-light);
+  min-height: 280px;
+}
+
+.drink-media-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.drink-card-lead:hover .drink-media-wrapper img {
+  transform: scale(1.05);
+}
+
+.drink-lead-info {
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.drink-tag-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.drink-name {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-ink-primary);
+  line-height: 1.2;
+}
+
+.drink-description {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  line-height: 1.6;
+}
+
+.drink-recipe-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.recipe-chip {
+  font-size: 0.75rem;
+  background-color: var(--color-neutral-warm);
+  color: var(--color-ink-secondary);
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--border-radius-xs);
+  font-weight: 500;
+}
+
+.drink-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-neutral-light);
+}
+
+.drink-price {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-ink-primary);
+}
+
+.drink-price small {
+  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  color: var(--color-ink-muted);
+  font-weight: 400;
+  margin-left: 0.2rem;
+}
+
+/* Secondary Feature (Cols 8-12) */
+.drink-card-portrait {
+  grid-column: span 12;
+  background-color: var(--color-canvas);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(33, 29, 26, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+@media (min-width: 900px) {
+  .drink-card-portrait {
+    grid-column: span 5;
+  }
+}
+
+.drink-card-portrait:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.drink-portrait-media {
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background-color: var(--color-neutral-light);
+}
+
+.drink-portrait-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.drink-card-portrait:hover .drink-portrait-media img {
+  transform: scale(1.05);
+}
+
+.drink-portrait-info {
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+/* Lower Trio Grid (Cards 3, 4, 5) */
+.drink-card-compact {
+  grid-column: span 12;
+  background-color: var(--color-canvas);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(33, 29, 26, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+@media (min-width: 900px) {
+  .drink-card-compact {
+    grid-column: span 4;
+  }
+}
+
+.drink-card-compact:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.drink-compact-media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-neutral-light);
+}
+
+.drink-compact-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.drink-card-compact:hover .drink-compact-media img {
+  transform: scale(1.05);
+}
+
+.drink-compact-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   MOMENT C: COFFEE CRAFTSMANSHIP (Editorial Magazine Double Spread)
+   ========================================================================== */
+.section-craft {
+  background-color: var(--color-canvas);
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+  border-top: 1px solid var(--color-neutral-light);
+  border-bottom: 1px solid var(--color-neutral-light);
+}
+
+.craft-spread-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .craft-spread-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.craft-visual-mosaic {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.craft-img-primary {
+  grid-column: span 2;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  box-shadow: var(--shadow-card);
+}
+
+.craft-img-primary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.craft-img-primary:hover img {
+  transform: scale(1.04);
+}
+
+.craft-img-secondary {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  box-shadow: var(--shadow-card);
+}
+
+.craft-img-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.craft-editorial-badge {
+  background-color: var(--color-neutral-warm);
+  border-radius: var(--border-radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--color-neutral-light);
+}
+
+.craft-stat-num {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  color: var(--color-green-primary);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.craft-stat-desc {
+  font-size: 0.8125rem;
+  color: var(--color-ink-secondary);
+  line-height: 1.4;
+}
+
+/* Craft Story Details */
+.craft-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.craft-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-amber-dark);
+}
+
+.craft-title {
+  font-size: var(--text-3xl);
+  line-height: 1.12;
+  color: var(--color-ink-primary);
+}
+
+.craft-body {
+  font-size: var(--text-base);
+  color: var(--color-ink-secondary);
+  line-height: 1.7;
+}
+
+/* Interactive Roast Spectrum Tabs */
+.roast-spectrum {
+  background-color: var(--color-neutral-warm);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--color-neutral-light);
+  margin-top: 0.5rem;
+}
+
+.roast-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.roast-tab {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-xs);
+  text-align: center;
+  background-color: rgba(251, 249, 245, 0.7);
+  color: var(--color-ink-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.roast-tab.active {
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+}
+
+.roast-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.roast-name {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: var(--color-ink-primary);
+}
+
+.roast-notes {
+  font-size: 0.875rem;
+  color: var(--color-ink-secondary);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   MOMENT D: SEASONAL CAMPAIGN (Configurable Accents Switcher)
+   ========================================================================== */
+.section-seasonal {
+  background-color: #F8F3EA;
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+  position: relative;
+  transition: background-color var(--transition-slow);
+}
+
+.seasonal-banner {
+  background-color: var(--color-canvas);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 40px -10px rgba(74, 48, 38, 0.12);
+  border: 1px solid rgba(74, 48, 38, 0.08);
+}
+
+.seasonal-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 960px) {
+  .seasonal-layout {
+    grid-template-columns: 1.15fr 1fr;
+  }
+}
+
+.seasonal-media {
+  position: relative;
+  overflow: hidden;
+  background-color: #E8DEC8;
+  aspect-ratio: 16 / 11;
+}
+
+@media (min-width: 960px) {
+  .seasonal-media {
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+}
+
+.seasonal-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.seasonal-banner:hover .seasonal-media img {
+  transform: scale(1.03);
+}
+
+.seasonal-content {
+  padding: clamp(2rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.seasonal-selector-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.season-btn {
+  padding: 0.45rem 1rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background-color: var(--color-neutral-warm);
+  color: var(--color-ink-muted);
+  border: 1px solid var(--color-neutral-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.season-btn.active {
+  background-color: #4A3026;
+  color: var(--color-white);
+  border-color: #4A3026;
+}
+
+.seasonal-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.season-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #B55734;
+}
+
+.season-title {
+  font-size: var(--text-2xl);
+  line-height: 1.15;
+  color: var(--color-ink-primary);
+}
+
+.season-description {
+  font-size: var(--text-base);
+  color: var(--color-ink-secondary);
+  line-height: 1.65;
+}
+
+.season-pairing {
+  background-color: #FAF6EF;
+  border-radius: var(--border-radius-sm);
+  padding: 1rem 1.25rem;
+  border-left: 3px solid #B55734;
+  font-size: 0.875rem;
+  color: var(--color-ink-secondary);
+}
+
+/* ==========================================================================
+   MOMENT E: COFFEEHOUSE ATMOSPHERE (The Third Place)
+   ========================================================================== */
+.section-atmosphere {
+  background-color: var(--color-canvas);
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+  border-top: 1px solid var(--color-neutral-light);
+}
+
+.atmosphere-header {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem) auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.atmosphere-title {
+  font-size: var(--text-3xl);
+  line-height: 1.15;
+}
+
+.atmosphere-spread {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .atmosphere-spread {
+    grid-template-columns: 1.3fr 1fr;
+  }
+}
+
+.atmosphere-primary-frame {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 11;
+  box-shadow: var(--shadow-card);
+}
+
+.atmosphere-primary-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.atmosphere-primary-frame:hover img {
+  transform: scale(1.03);
+}
+
+.atmosphere-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.atmosphere-quote {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-green-dark);
+  line-height: 1.45;
+  border-left: 2px solid var(--color-green-primary);
+  padding-left: 1.5rem;
+}
+
+.atmosphere-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pillar-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.pillar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-green-soft);
+  color: var(--color-green-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.pillar-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.pillar-title {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-ink-primary);
+  margin-bottom: 0.2rem;
+}
+
+.pillar-text {
+  font-size: 0.8125rem;
+  color: var(--color-ink-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   MOMENT F: CLOSING HERO & FUNCTIONAL FOOTER
+   ========================================================================== */
+.section-closing {
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+  padding-top: clamp(4.5rem, 8vw, 7rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.closing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .closing-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.closing-title {
+  font-size: var(--text-3xl);
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.closing-copy {
+  font-size: var(--text-md);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 48ch;
+  margin-bottom: 2rem;
+}
+
+.closing-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--border-radius-lg);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.closing-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-group {
+  display: flex;
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: border-color var(--transition-fast);
+}
+
+.input-group:focus-within {
+  border-color: var(--color-white);
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.85rem 1.25rem;
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  font-size: 0.875rem;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-input:focus {
+  outline: none;
+}
+
+.btn-newsletter {
+  padding: 0.85rem 1.5rem;
+  background-color: var(--color-white);
+  color: var(--color-green-dark);
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-newsletter:hover {
+  background-color: var(--color-green-light);
+}
+
+/* --------------------------------------------------------------------------
+   SITE FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: #12100E;
+  color: #DDD6CE;
+  padding-top: clamp(3.5rem, 6vw, 5rem);
+  padding-bottom: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-nav-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-col-title {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-link {
+  font-size: 0.875rem;
+  color: #A69E96;
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-white);
+}
+
+.footer-bottom {
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo-svg {
+  width: 36px;
+  height: 36px;
+}
+
+.footer-disclaimer {
+  font-size: 0.75rem;
+  color: #7D756D;
+  max-width: 60ch;
+  line-height: 1.5;
+}

@@ -1,0 +1,84 @@
+:root {
+  /* ==========================================================================
+     STARBUCKS EDITORIAL DESIGN TOKENS
+     Inspired by Starbucks Creative Expression & Contemporary Magazine Design
+     ========================================================================== */
+
+  /* Brand Greens */
+  --color-green-primary: #006241;
+  --color-green-dark: #1E3932;       /* House Green */
+  --color-green-accent: #00754A;
+  --color-green-light: #D4E9E2;      /* Warm Mint Wash */
+  --color-green-soft: #E8F2EE;
+
+  /* Editorial Neutrals & Warm Canvas */
+  --color-canvas: #FBF9F5;          /* Warm Milk Canvas */
+  --color-neutral-warm: #F2F0EB;    /* Warm Neutral Canvas */
+  --color-neutral-card: #FAF6EF;    /* Slightly warmer card surface */
+  --color-neutral-light: #EBE6DD;   /* Warm border & divider tone */
+  --color-neutral-hover: #E3DDD1;
+  --color-white: #FFFFFF;
+
+  /* Typography & Ink Colors */
+  --color-ink-primary: #211D1A;     /* Dark Espresso Charcoal */
+  --color-ink-secondary: #4A423B;   /* Deep Warm Brown */
+  --color-ink-muted: #756D65;       /* Editorial Caption Gray */
+  --color-ink-faint: #A69E96;       /* Subtle meta text */
+
+  /* Warm Accent Hues (Reserve Amber, Caramel, Warm Clay) */
+  --color-amber-reserve: #C88D41;
+  --color-amber-warm: #D9A05B;
+  --color-amber-dark: #8C531B;
+  --color-terracotta: #B55734;
+  --color-terracotta-soft: #F9ECE6;
+
+  /* Typography Stacks */
+  --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+
+  /* Fluid Editorial Scale */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --text-md: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+  --text-lg: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem);
+  --text-2xl: clamp(1.875rem, 1.65rem + 1.1vw, 2.375rem);
+  --text-3xl: clamp(2.25rem, 1.95rem + 1.6vw, 3.125rem);
+  --text-4xl: clamp(2.75rem, 2.3rem + 2.3vw, 4rem);
+  --text-display: clamp(3.25rem, 2.6rem + 3.2vw, 5.25rem);
+
+  /* Spacing Scale */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* Structural Dimensions */
+  --container-max: 1360px;
+  --header-height: 4.75rem;
+  --border-radius-xs: 4px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 14px;
+  --border-radius-lg: 24px;
+  --border-radius-full: 9999px;
+
+  /* Shadows (Warm diffused shadows, never cold black) */
+  --shadow-subtle: 0 2px 8px rgba(33, 29, 26, 0.04);
+  --shadow-card: 0 8px 24px -4px rgba(33, 29, 26, 0.07);
+  --shadow-hover: 0 16px 36px -6px rgba(33, 29, 26, 0.12);
+  --shadow-drawer: -8px 0 32px rgba(33, 29, 26, 0.18);
+
+  /* Transitions */
+  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 450ms cubic-bezier(0.34, 1.4, 0.64, 1);
+}
