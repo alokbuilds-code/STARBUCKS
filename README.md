@@ -3,7 +3,7 @@
 > **An art-directed digital coffee experience built with HTML5, CSS3, Vanilla JavaScript ES Modules, and purposeful GSAP motion.**  
 > *Designed to eliminate generic AI web design patterns in favor of deliberate composition, authentic typography, and genuine coffeehouse atmosphere.*
 
----
+https://starbucks-pi-three.vercel.app/
 
 ## 1. Project Overview & Design Manifesto
 
@@ -173,32 +173,6 @@ The design was structured with fluid CSS (`clamp()`, CSS Grid, Flexbox) and veri
 - Full `aria-modal="true"`, `aria-label`, and `role="dialog"` attributes on all slide-in drawers.
 - Keyboard focus trapping and `Escape` key listeners to dismiss all active overlays.
 
----
 
-## 6. How to Run Locally
 
-Because this project is built entirely on native web standards and Vanilla ES modules, it can be run using any local static file server:
 
-### Option A: VS Code Live Server
-1. Open the project folder in VS Code.
-2. Right-click `index.html` and choose **"Open with Live Server"**.
-
-### Option B: Node.js (npx serve / http-server)
-```bash
-npx serve .
-# or
-npx http-server . -p 3000
-```
-Open your browser at `http://localhost:3000`.
-
-### Option C: Python 3
-```bash
-python -m http.server 8000
-```
-Open your browser at `http://localhost:8000`.
-
----
-
-## 7. Legal & Demonstration Disclaimer
-
-*This project is a non-commercial design and engineering concept developed for portfolio demonstration purposes. All trademarks, service marks, trade names, product names, and logos appearing on the site are the property of Starbucks Corporation. No commercial transactions or financial operations take place within this project.*
